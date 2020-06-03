@@ -1,0 +1,170 @@
+@import '_variables.scss';
+@import '_mixins.scss';
+@import '_animation.scss';
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #292929;
+    font-family: 'Quicksand',
+    sans-serif;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+    line-height: normal;
+    font-size: 18px;
+    color: white;
+}
+ul{
+    padding:0;
+    margin: 0;
+
+}
+
+li{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    color: white;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+p{
+    font-size: 16px;
+    color: white;
+    line-height: 1.5;
+    letter-spacing: 1px;
+}
+
+img{
+    max-width: 100%;
+}
+.container {
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+
+    background-color: red;
+
+
+    @include breakpoint(phone) {
+        width: 550px;
+    }
+
+    @include breakpoint(tab) {
+        width: 750px;
+    }
+
+    @include breakpoint(tablet) {
+        width: 970px;
+    }
+
+    @include breakpoint(desktop) {
+        width: 1170px;
+    }
+
+    @include breakpoint(large) {
+        width: 1600px;
+    }
+}
+
+.btn{
+    position: relative;
+    background-color: transparent;
+    color: white;
+    width: 170px;
+    height: 40px;
+    letter-spacing: 3px;
+    border-radius: 20px;
+    border: 2px solid $logo-color;
+    text-align: center;  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+
+    &:hover{
+        animation: rotate 0.7s ease-in-out both;
+        span{
+            animation: storm 0.7s ease-in-out both;
+            animation-delay: 0.06s;
+        }
+    }
+}
+
+.btn-go-to{
+    display: flex;
+    align-items: center;
+    width: 220px;
+    background-color: transparent;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
+
+    &__info{
+        color: white;
+        font-size: 14px;
+        letter-spacing: 1.5px;
+    }
+
+    &::before {
+        content: '';
+        width: 30px;
+        border: 1px solid white;
+        margin-right: 15px;
+    }
+}
+
+.arrow-in-circle {
+    margin-left: 15px;
+    // margin-bottom: 50px;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 1px solid white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    // z-index: -1;
+
+    img {
+        // z-index: -10;
+        height: 25px;
+        animation-name: rotate-shake;
+        animation-duration: 7s;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite;
+    }
+}
