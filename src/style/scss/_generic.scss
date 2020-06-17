@@ -64,14 +64,13 @@ p{
 img{
     max-width: 100%;
 }
+
 .container {
     width: 100%;
     padding-left: 15px;
     padding-right: 15px;
     margin-left: auto;
     margin-right: auto;
-
-    background-color: red;
 
 
     @include breakpoint(phone) {
@@ -95,12 +94,85 @@ img{
     }
 }
 
-.btn{
+//Hamburger Button
+
+.hamburger {
+    padding: 2px;
+    cursor: pointer;
+    background-color: transparent;
+    border: 0;
+    margin-right: 15px;
+    outline: none;
+
+    @include breakpoint(tablet){
+        display: none;
+    }
+
+    &__box {
+        width: 40px;
+        height: 26px;
+        display: inline-block;
+        position: relative;
+    }
+
+    &__inner {
+        width: 100%;
+        height: 3px;
+        background-color: white;
+        position: absolute;
+        border-radius: 20%;
+        left: 0;
+        top: 50%;
+
+        &::before,
+        &::after {
+            content: '';
+            width: 100%;
+            height: 3px;
+            background-color: white;
+            border-radius: 20%;
+            position: absolute;
+            left: 0;
+            transition: transform .1s ease-in-out;
+        }
+
+        &::before {
+            top: -10px;
+        }
+
+        &::after {
+            top: 10px;
+        }
+    }
+
+    &--active {
+        .hamburger__inner {
+            background-color: transparent;
+        }
+
+        .hamburger__inner::before {
+            transform: translateY(10px) rotate(45deg);
+        }
+
+        .hamburger__inner::after {
+            transform: translateY(-10px) rotate(-45deg);
+        }
+    }
+}
+
+
+
+
+//===========
+//BUTTONS 
+//===========
+
+.btn-primary{
     position: relative;
     background-color: transparent;
     color: white;
     width: 170px;
-    height: 40px;
+    height: 35px;
     letter-spacing: 3px;
     border-radius: 20px;
     border: 2px solid $logo-color;
@@ -108,17 +180,20 @@ img{
     display: flex;
     justify-content: center;
     align-items: center;
-
-
-
+    outline: none;
+    cursor: pointer;
+    transition: border .3s ease-in-out;
+    
     &:hover{
         animation: rotate 0.7s ease-in-out both;
+        border: 1px solid white;
         span{
             animation: storm 0.7s ease-in-out both;
             animation-delay: 0.06s;
         }
     }
 }
+
 
 .btn-go-to{
     display: flex;
@@ -129,11 +204,18 @@ img{
     align-items: center;
     justify-content: center;
     margin-bottom: 50px;
-
+    
+    &:hover{
+        .btn-go-to__info{
+            color: $logo-color;
+        }
+    }
+    
     &__info{
         color: white;
         font-size: 14px;
         letter-spacing: 1.5px;
+        transition: color .2s ease-in-out;
     }
 
     &::before {
@@ -142,11 +224,11 @@ img{
         border: 1px solid white;
         margin-right: 15px;
     }
+
 }
 
 .arrow-in-circle {
     margin-left: 15px;
-    // margin-bottom: 50px;
     height: 40px;
     width: 40px;
     border-radius: 50%;
@@ -157,14 +239,53 @@ img{
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    // z-index: -1;
 
     img {
-        // z-index: -10;
         height: 25px;
         animation-name: rotate-shake;
         animation-duration: 7s;
         animation-timing-function: ease-in-out;
         animation-iteration-count: infinite;
     }
+}
+
+.content {
+    margin-left: 10px;
+    margin-bottom: 40px;
+
+    &__title{
+        font-size: 24px;
+        letter-spacing: 3px;
+        font-weight: normal;
+        line-height: 1;
+        margin-bottom: 20px;
+        color: white;
+        margin-left: 20px;
+
+        @include breakpoint(tablet){
+            font-size: 26px;
+        }
+    }
+    
+    &__text{
+        position: relative;
+        font-size: 16px;
+        line-height: 1.5;
+        color: white;
+
+
+        &::before {
+            content: '';
+            border: 1px solid #fff;
+            position: absolute;
+            height: 135%;
+            transform: translate(-15px, -55px);
+        }
+    }
+
+    &--center {
+        text-align: center;
+    }
+
+    
 }

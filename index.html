@@ -1,9 +1,12 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio GK</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="src\img\person.png" type="image/x-icon">
 
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/643726dbb6.js" crossorigin="anonymous"></script>
@@ -12,61 +15,72 @@
     <link href="https://fonts.googleapis.com/css?family=Caveat&amp;display=swap&amp;subset=latin-ext" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Quicksand:400,700&amp;display=swap&amp;subset=latin-ext" rel="stylesheet">
 
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="./src/style/main.css">
+    <!-- Style Sheet Awesome -->
+    <link rel="stylesheet" type="text/css" href="slick-1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="slick-1.8.1/slick/slick-theme.css"/>
+
+    <link rel="stylesheet" href="src/style/main.css">
 
 </head>
-<body>
+<body id="home">
     <!-- Header -->
-    <header id="header" class="header-section">
+    <header id="header" class="header-section header-scroll">
         <div class="header">
             <h1 class="header__logo">portfolio</h1>
             <nav class="nav-menu">
                 <ul class="nav-menu__list">
                     <li class="nav-menu__item">
-                        <a class="nav-menu__link" href="#">About me</a>
+                        <a class="nav-menu__link" href="#about">About me</a>
                     </li>
                     <li class="nav-menu__item">
-                        <a class="nav-menu__link" href="#">Project</a>
+                        <a class="nav-menu__link" href="#skill">Skills</a>
                     </li>
                     <li class="nav-menu__item">
-                        <a class="nav-menu__link nav-menu__link--active" href="#">Home</a>
+                        <a class="nav-menu__link" href="#">Home</a>
                     </li>
                     <li class="nav-menu__item">
-                        <a class="nav-menu__link" href="#">Skills</a>
+                        <a class="nav-menu__link" href="#projects">Projects</a>
                     </li>
                     <li class="nav-menu__item">
-                        <a class="nav-menu__link" href="#">Contact</a>
+                        <a class="nav-menu__link" href="#contact">Contact</a>
                     </li>
                 </ul>
             </nav>
+            <div class="header__hamburger">
+                <button class="hamburger">
+                    <span class="hamburger__box">
+                        <span class="hamburger__inner"></span>
+                    </span>
+                </button>
+            </div>
             <div class="header__social">
-                <a class="btn-circle" href="https://github.com/ErykFryderyk" title="My GITHUB!">
+                <a class="btn-circle" href="https://github.com/ErykFryderyk" target="blank"title="My GITHUB!">
                     <i class="fab fa-github"></i>
                 </a>
             </div>
         </div>
     </header>
     <main>
+    <!--  -->
     <!-- Hero Section -->
         <section class="hero-section" id="hero">
             <div class="hero">
                 <div class="hero__inner">
+                    <div class="avatar">
+                       <!-- image -->
+                    </div>
                     <div class="person">
-                        <div class="person__avatar">
-                            <!-- image -->
-                        </div>
-                        <h1 class="person__name">Grzegorz Kostrzewa</h1>
+                        <h2 class="person__name">Grzegorz Kostrzewa</h2>
                         <h3 class="person__position">junior front-end developer</h3>
-                        <a class="btn btn__primary " href="#contact">
+                        <a class="btn-primary " href="#contact">
                             <span>contact</span>
                         </a>
                     </div>
                     <div class="hero__direct">
-                        <a class="btn-go-to" href="#">
+                        <a class="btn-go-to" href="#projects">
                             <span class="btn-go-to__info">view project</span>
                             <div class="arrow-in-circle">
-                                <img src="/src/img/arrow-down.png" alt="">
+                                <img src="src/img/arrow-down.png" alt="">
                             </div>
                         </a>
                     </div>
@@ -77,9 +91,319 @@
                 </div>
             </div>
         </section>
+    <!--  -->
+    <!-- About me Section --> 
+        <section id="about" class="about-section">
+            <div class="container">
+                <div class="section-header appear-animation">
+                    <div class="section-header__inner">
+                        <h1 class="greet-text"> hello<br> everyone</h1>
+                    </div>
+                </div>
+                <div class="about">
+                    <div class="content translate-up">
+                        <h4 class="content__title appear-animation">Hi! I'm Grzegorz</h4>
+                        <p class="content__text appear-animation">Jestem początkującym front-end developerem. Ponad rok temu zainteresowałem się tworzeniem aplikacji internetowych. Poszukuję pracy, gdzie będę mógł się rozwijać i poszerzać swoje umiejętności. Do tworzenia aplikacji internetowych wykorzystuję technologie HTML, CSS, JavaScript. Staram się, aby pisany przeze mnie kod był przejrzysty i czysty, zachowując odpowiednią semantykę i nazewnictwo. Lubię wyzwania i nie brakuje mi chęci do nauki nowych rzeczy. Realizowanie projektów oraz kodowanie przynoszą mi satysfakcję i wielką radość 😊.</p>
+                    </div>
+                    <div class="about__illustration-box appear-animation">
+                        <img src="src/img/illustration.png" alt="https://pl.freepik.com/">
+                    </div>
+                </div>
+            </div>    
+        </section>
+    <!--  -->
+    <!-- About me Section --> 
+        <section class="skill-section" id="skill">
+            <div class="container appear-animation">
+                <div class="section-header">
+                    <div class="section-header__inner">
+                        <h2 class="section-header__title">My skills</h2>
+                    </div>
+                </div>
+                <div class="skill-part">
+                    <div class="">
+                        <h4 class="content__title content--center">Languages</h4>
+                        <div class="icon-box">
+                            <div class="icon-box__item icon-box__item--html">
+                                <!-- <i class="fab fa-html5"></i> -->
+                            </div>
+                            <div class="icon-box__item icon-box__item--css">
+                                <!-- <i class="fab fa-css3-alt"></i> -->
+                            </div>
+                            <div class="icon-box__item icon-box__item--javascript">
+                                <!-- <i class="fab fa-js"></i> -->
+                            </div>
+                            <div class="icon-box__item icon-box__item--php">
+                                <!-- <i class="fab fa-php"></i> -->
+                            </div>
+                            <div class="icon-box__item icon-box__item--mysql">
+                                <!-- <i class="fas fa-database"></i> -->
+                            </div>
+                            <div class="icon-box__item icon-box__item--jquery">
+                                <!-- jQuery -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <h4 class="content__title">Java Script</h4>
+                        <p class="content__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus aliquam quod qui iure nostrum similique quo dolorum deleniti eum. Repudiandae modi nobis ea maiores ipsam facere enim repellat optio architecto. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum sunt asperiores molestias suscipit! Quasi tempora placeat blanditiis atque voluptatum at sapiente voluptas labore obcaecati reiciendis quia, dolorem iure quisquam aspernatur.</p>
+                    </div>
+                </div>
+                <div class="skill-part appear-animation">
+                    <div class="skill-part__tools">
+                        <h4 class="content__title content--center">Development tools</h4>
+                        <div class="small-icon-box">
+                            <div class="small-icon-box__item small-icon-box__item--gulp">
+                            </div>
+                            <div class="small-icon-box__item small-icon-box__item--sass">
+                            </div>
+                            <div class="small-icon-box__item small-icon-box__item--webpack">
+                            </div>
+                            <div class="small-icon-box__item small-icon-box__item--git">
+                            </div>
+                            <div class="small-icon-box__item small-icon-box__item--bootstrap">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-part__design">
+                        <h4 class="content__title content--center">Code Editor & Design</h4>
+                         <div class="small-icon-box">
+                            <div class="small-icon-box__item small-icon-box__item--vscode"></div>
+                            <div class="small-icon-box__item small-icon-box__item--adobe"></div>
+                            <div class="small-icon-box__item small-icon-box__item--adobe-XD"></div>
+                            <div class="small-icon-box__item small-icon-box__item--figma"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    <!--  -->
+    <!-- Project Section --> 
+        <section class="projects-section" id="projects">
+            <div class="container appear-animation">
+                <div class="section-header">
+                    <div class="section-header__inner section-header__inner--left">
+                        <h2 class="section-header__title">Projects</h2>
+                    </div>
+                </div>  
+                <div class="projects-box">
+                    <div class="projects-box__item">
+                        <div class="projects-box__bg">
+                            <img src="src/img/projects/portfolio.png" alt="">
+                        </div>
+                        <div class="projects-box__description"> 
+                            <h5 class="projects-box__title">Portfolio</h5> 
+                            <p class="projects-box__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, reprehenderit.</p>
+                        </div>
+                        <div class="projects-box__buttons">
+                            <a class="btn-primary" href="">
+                                <span>demo</span>
+                            </a>
+                            <a class="projects-box__btn-github" href="">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="projects-box__item">
+                        <div class="projects-box__bg">
+                            <img src="src/img/projects/tbbapi.png" alt="">
+                        </div>
+                        <div class="projects-box__description"> 
+                            <h5>Portfolio</h5> 
+                            <p class="projects-box__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, reprehenderit.</p>
+                        </div>
+                        <div class="projects-box__buttons">
+                            <a class="btn-primary" href="">
+                                <span>demo</span>
+                            </a>
+                            <a class="projects-box__btn-github" href="">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="projects-box__item">
+                        <div class="projects-box__bg">
+                            <img src="src/img/projects/sort-ball.png" alt="">
+                        </div>
+                        <div class="projects-box__description"> 
+                            <h5>Portfolio</h5> 
+                            <p class="projects-box__text">Sort Ball is a game about placing balls of the same color in a glass container.</p>
+                            <p class="projects-box__text">HTML/CSS/JS</p>
+                        </div>
+                        <div class="projects-box__buttons">
+                            <a class="btn-primary" href="https://erykfryderyk.github.io/Sort-Ball-Game-/" target="blank">
+                                <span>demo</span>
+                            </a>
+                            <a class="projects-box__btn-github" href="https://github.com/ErykFryderyk/Sort-Ball-Game-" target="blank">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="projects-box__item">
+                        <div class="projects-box__bg">
+                            <img src="src/img/projects/electro.png" alt="">
+                        </div>
+                        <div class="projects-box__description"> 
+                            <h5>Portfolio</h5> 
+                            <p class="projects-box__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, reprehenderit.</p>
+                        </div>
+                        <div class="projects-box__buttons">
+                            <a class="btn-primary" href="">
+                                <span>demo</span>
+                            </a>
+                            <a class="projects-box__btn-github" href="">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="projects-box__item">
+                        <div class="projects-box__bg">
+                            <img src="src/img/projects/praca.png" alt="">
+                        </div>
+                        <div class="projects-box__description"> 
+                            <h5>Portfolio</h5> 
+                            <p class="projects-box__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, reprehenderit.</p>
+                        </div>
+                        <div class="projects-box__buttons">
+                            <!-- <a class="btn-primary" href="">
+                                <span>demo</span>
+                            </a> -->
+                            <a class="projects-box__btn-github" href="https://github.com/ErykFryderyk/Praca-inzynierska" target="blank">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    <!--  -->
+    <!-- Landing Page Section --> 
+        <section class="landing-page-section">
+            <div class="container">
+                <div class="landing-page appear-animation">
+                    <h4 class="content__title content--center">Landing pages</h4>
+                    <div class="slick-slider">
+                        <div class="landing-page__item">
+                            <img src="src/img/landing/eSetup.png" alt="">
+                            <div class="landing-page__overlay">
+                                <h5 class="landing-page__title ">eStartup</h5>
+                                <p class="landing-page__description">Landing page to simply practice writing the code</p>
+                                <div class="landing-page__buttons">
+                                    <a class="btn-primary" href="https://erykfryderyk.github.io/website-landing-2/">
+                                        <span>demo</span>
+                                    </a>
+                                    <a class="projects-box__btn-github" href="https://github.com/ErykFryderyk/website-landing-2" target="blank">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="landing-page__item">
+                            <img src="src/img/landing/regna.png" alt="">
+                            <div class="landing-page__overlay">
+                                <h5 class="landing-page__title ">Regna</h5>
+                                <p class="landing-page__description">Landing page to simply practice writing the code</p>
+                                <div class="landing-page__buttons">
+                                    <a class="btn-primary" href="https://erykfryderyk.github.io/website-landing-1/" target="blank">
+                                        <span>demo</span>
+                                    </a>
+                                    <a class="projects-box__btn-github" href="https://github.com/ErykFryderyk/website-landing-1" target="blank">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    <!--  -->
+    <!-- Contact Section --> 
+        <section class="contact-section" id="contact">
+            <div class="container">
+                <div class="contact opacity-animation">
+                    <div class="contact__info">
+                        <h4 class="content__title content--center">Contact</h4>
+                        <p class="contact__text">Duis posuere pulvinar malesuada. Nam sodales sagittis volutpat. In hac habitasse platea dictumst. Nunc a orci consequat, semper felis in, tempus ante. Mauris euismod ante arcu, vitae rutrum tortor. </p>
+                        <h6 class="contact__label">phone</h6>
+                        <p class="contact__phone">+48 537 736 758</p>
+                        <h6 class="contact__label">email</h6>
+                        <p class="contact__email">grzeniu098@gmail.com</p>
+                        <div class="contact__social-media">
+                            <a class="contact__btn-social" href="https://github.com/ErykFryderyk" target="blank" title="My GITHUB!">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a class="contact__btn-social" href="https://www.linkedin.com/in/grzegorz-kostrzewa-14bb85194/" target="blank">
+                                <i class="fab fa-linkedin" title="My LinkedIn!"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="contact__form opacity-animation">
+                        <form class="form-box" action="https://formspree.io/grzeniu098@gmail.com">
+                            <h5 class="form-box__title">contact form</h5>
+                            <div class="form-box__item">
+                                <input class="form-box__input" name="name" type="text" placeholder="name" data-text-error="Wpisz poprawne imię">
+                            </div>
+                            <div class="form-box__item">
+                                <input class="form-box__input" name="email" type="text" placeholder="email address">
+                            </div>
+                            <div class="form-box__item">
+                                <textarea class="form-box__area" name="message" 
+                            placeholder="message"></textarea>
+                            </div>
+                            <button id="submit" class="btn-primary elem-is-busayd" type="submit"><span>send message</span></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
+    <footer class="footer">
+        <p class="footer__info"><a href="">© 2020 Eryk Fryderyk. All rights reserved</a></p>
+    </footer>
 
-    <!-- Main Script File -->
-    <script src="/src/js/.."></script>
+    <!--Script File -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.js" integrity="sha256-DrT5NfxfbHvMHux31Lkhxg42LY6of8TaYyK50jnxRnM=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="slick-1.8.1/slick/slick.min.js"></script>
+
+
+    <script src="src/js/slick-slider.js"></script>
+    <script src="src/js/form.js"></script>
+    <script src="src/js/main.js"></script>
+
+
+    <!-- Mobile Navigation Menu  -->
+    
+    <nav class="mobile-nav-menu mobile">
+        <ul class="mobile-nav-menu__list">
+            <li class="mobile-nav-menu__item">
+                <a class="mobile-nav-menu__link" href="#home">Home</a>
+            </li>
+            <li class="mobile-nav-menu__item">
+                <a class="mobile-nav-menu__link" href="#about">About me</a>
+            </li>
+            <li class="mobile-nav-menu__item">
+                <a class="mobile-nav-menu__link" href="#skill">Skills</a>
+            </li>
+            <li class="mobile-nav-menu__item">
+                <a class="mobile-nav-menu__link" href="#projects">Projects</a>
+            </li>
+            <li class="mobile-nav-menu__item">
+                <a class="mobile-nav-menu__link" href="#contact">Contact</a>
+            </li>
+            <li class="mobile-nav-menu__social">
+                <a class="mobile-nav-menu__btn-social" href="https://github.com/ErykFryderyk" target="blank" title="My GITHUB!">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a class="mobile-nav-menu__btn-social" href="https://www.linkedin.com/in/grzegorz-kostrzewa-14bb85194/" target="blank" title="My LinkedIn!">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="mobile-body-overly">
+    </div>
+    
 </body>
 </html>
