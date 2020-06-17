@@ -483,8 +483,7 @@
             background-image: url('../img/jquery.png');
         }  
     
-    &:hover,
-    &:focus {
+    &:hover {
         border-color: $logo-color;
         transform: scale(1.05);
     }

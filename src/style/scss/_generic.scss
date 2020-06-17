@@ -273,14 +273,33 @@ img{
         line-height: 1.5;
         color: white;
 
+        &--left-line{
 
-        &::before {
-            content: '';
-            border: 1px solid #fff;
-            position: absolute;
-            height: 135%;
-            transform: translate(-15px, -55px);
+            &::before {
+                content: '';
+                border: 1px solid #fff;
+                position: absolute;
+                height: 135%;
+                transform: translate(-15px, -55px);
+            }
         }
+        &--underline{
+
+            &::before {
+                content: '';
+                border: 1px solid #fff;
+                position: absolute;
+                width: 100%;
+                bottom: -10px;
+                
+            }
+        }
+
+    }
+    
+    
+    &--hidden{
+        display: none;
     }
 
     &--center {

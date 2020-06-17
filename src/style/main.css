@@ -289,12 +289,20 @@ img {
     font-size: 16px;
     line-height: 1.5;
     color: white; }
-    .content__text::before {
+    .content__text--left-line::before {
       content: '';
       border: 1px solid #fff;
       position: absolute;
       height: 135%;
       transform: translate(-15px, -55px); }
+    .content__text--underline::before {
+      content: '';
+      border: 1px solid #fff;
+      position: absolute;
+      width: 100%;
+      bottom: -10px; }
+  .content--hidden {
+    display: none; }
   .content--center {
     text-align: center; }
 
@@ -653,7 +661,7 @@ img {
     .icon-box__item--jquery {
       border-color: #193556;
       background-image: url("../img/jquery.png"); }
-    .icon-box__item:hover, .icon-box__item:focus {
+    .icon-box__item:hover {
       border-color: rgba(171, 37, 37, 0.747);
       transform: scale(1.05); }
 
