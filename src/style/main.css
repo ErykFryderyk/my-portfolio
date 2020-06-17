@@ -83,9 +83,10 @@
 
 .opacity-animation {
   opacity: 0;
-  transition: opacity .7s ease-in-out; }
+  transition: opacity 1s ease-in-out; }
   .opacity-animation--active {
-    opacity: 1; }
+    opacity: 1;
+    transition: opacity 1s ease-in-out; }
 
 *,
 *::before,

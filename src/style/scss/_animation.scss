@@ -150,15 +150,17 @@
         opacity: 1;
         transform: translateY(0);
         // transition: opacity .7s ease-in-out,
-        //     transform 7s cubic-bezier(0.66, 0.01, 0.35, 0.97);
+        //     transform .7s cubic-bezier(0.66, 0.01, 0.35, 0.97);
     }
 }
 
 .opacity-animation{
     opacity: 0;
-    transition: opacity .7s ease-in-out;
-
+    transition: opacity 1s ease-in-out;
+    
     &--active{
         opacity: 1;
+        transition: opacity 1s ease-in-out;
+
     }
 }
