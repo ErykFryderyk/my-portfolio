@@ -68,42 +68,43 @@ const removeFieldError = function (field) {
 
 
 form.addEventListener("submit", e => {
-    e.preventDefault();
+    
+    // e.preventDefault();
 
     let formErrors = false;
-
+    
     for (const el of inputs) {
         removeFieldError(el);
         el.classList.remove("field-error");
-
+        
         if (!el.checkValidity()) {
             createFieldError(el, el.dataset.textError);
             el.classList.add("field-error");
             formErrors = true;
         }
     }
-
+    
     if (!testText(inputName, 3)) {
         markFieldAsError(inputName, true);
         createFieldError(inputName, "name is too short");
         formErrors = true;
     }
-
+    
     if (!testEmail(inputEmail)) {
         markFieldAsError(inputEmail, true);
         createFieldError(inputEmail, "email address is not valid");
         formErrors = true;
     }
-
+    
     if (!testText(formMessage, 5)) {
         markFieldAsError(formMessage, true);
         createFieldError(formMessage, "message is too short");
         formErrors = true;
     }
-
+    
     if (!formErrors) {
         const submit = form.querySelector("#submit");
-        // submit.classList.add("elem-is-busy");
+        submit.classList.add("elem-is-busy");
         submit.disabled = true;
         inputName.readOnly = true;
         inputEmail.readOnly = true;
