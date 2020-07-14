@@ -67,9 +67,7 @@ const scrollAppear = () => {
         
         if (appearElementTop < browserScreenPosition) {
             el.classList.add('appear-animation--active');
-        } else if (appearElementTop > browserScreenPosition) {
-            el.classList.remove('appear-animation--active');
-        }
+        } 
     })
 
 }
@@ -80,8 +78,6 @@ const scrollOpacity = () => {
 
         if (opacityElementTop < browserScreenPosition) {
             el.classList.add('opacity-animation--active');
-        } else if (opacityElementTop > browserScreenPosition) {
-            el.classList.remove('opacity-animation--active');
         }
     })
 
