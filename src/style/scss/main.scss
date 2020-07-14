@@ -187,12 +187,12 @@
     }
 
     &__photography{
-        background-image: url('../img/moja_fotka.png');
+        background-image: url('../img/GK-fotka2.png');
         background-repeat: no-repeat;
         background-position: bottom;
         background-size: contain;
-        margin-top: 50px;
         display: none;
+        filter: brightness(0.8);
 
         @include breakpoint(tablet){
             display: block;
@@ -217,7 +217,7 @@
      border-radius: 50%;
      border: 3px solid $logo-color;
      margin-bottom: 50px;
-     background: url('../img/avatar.jpeg');
+     background: url('../img/avatar.jpg');
      background-repeat: no-repeat;
      background-size: cover;
      @include breakpoint(tab) {
@@ -628,8 +628,9 @@
         position: absolute;
         transition: filter .5s ease-in-out;
         filter: brightness(0.6);
-
+        
         img{
+            object-fit: cover;
             min-height: 100%;
         }
     }

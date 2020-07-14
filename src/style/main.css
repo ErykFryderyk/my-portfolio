@@ -441,12 +441,12 @@ img {
     justify-content: center;
     align-items: center; }
   .hero__photography {
-    background-image: url("../img/moja_fotka.png");
+    background-image: url("../img/GK-fotka2.png");
     background-repeat: no-repeat;
     background-position: bottom;
     background-size: contain;
-    margin-top: 50px;
-    display: none; }
+    display: none;
+    filter: brightness(0.8); }
     @media only screen and (min-width: 992px) {
       .hero__photography {
         display: block; } }
@@ -464,7 +464,7 @@ img {
   border-radius: 50%;
   border: 3px solid rgba(171, 37, 37, 0.747);
   margin-bottom: 50px;
-  background: url("../img/avatar.jpeg");
+  background: url("../img/avatar.jpg");
   background-repeat: no-repeat;
   background-size: cover; }
   @media only screen and (min-width: 768px) {
@@ -762,6 +762,7 @@ img {
     transition: filter .5s ease-in-out;
     filter: brightness(0.6); }
     .projects-box__bg img {
+      object-fit: cover;
       min-height: 100%; }
   .projects-box__description {
     position: absolute;
