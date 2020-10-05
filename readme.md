@@ -10,4 +10,4 @@ Project is created with:
 * HTML
 * CSS(SASS)
 
-[LIVE](https://#)
+[LIVE](https://erykfryderyk.github.io/my-portfolio/)
