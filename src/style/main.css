@@ -446,7 +446,7 @@ img {
     background-position: bottom;
     background-size: contain;
     display: none;
-    filter: brightness(0.8); }
+    filter: brightness(0.8 0.5); }
     @media only screen and (min-width: 992px) {
       .hero__photography {
         display: block; } }
