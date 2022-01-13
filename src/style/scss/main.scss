@@ -1065,10 +1065,11 @@
 
     &__item{
         width: 4px;
-        height: 30px;
+        height: 40px;
         border-radius: 50px;
-        background-color:#888888;
+        background-color:#81818167;
         display: block;
+        transition: background-color .3s ease-in-out;
 
         &--active{
             background-color: $white-color;
