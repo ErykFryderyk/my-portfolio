@@ -16,6 +16,9 @@ const prepareDOMElements = () => {
     appearElements = document.querySelectorAll('.appear-animation');
     opacityElements = document.querySelectorAll('.opacity-animation');
     clickMobileLink = document.querySelectorAll('.mobile-nav-menu__link');
+    sections = document.querySelectorAll('section');
+    navLinks = document.querySelectorAll('[data-navlink]');
+    navMenuLinks = document.querySelectorAll('nav-menu__link');
 }
 
 
@@ -23,7 +26,8 @@ const prepareDOMEvents = () => {
     window.addEventListener('scroll', headerDarken);
     window.addEventListener('scroll', scrollAppear);
     window.addEventListener('scroll', scrollOpacity);
-
+    window.addEventListener('scroll', HighlightNavOnScroll);
+        
     hamburger.addEventListener('click', mobileMenu);
     bodyOverly.addEventListener('click', closeMenu);
     boxLanguage.addEventListener('click', e => contentLanguageShow(e));
@@ -81,6 +85,27 @@ const scrollOpacity = () => {
         }
     })
 
+}
+const HighlightNavOnScroll = () => {
+    let current = '';
+    const browserScreenHeight = window.innerHeight;
+
+    sections.forEach(section => {
+        const sectionID = section.getAttribute('id');
+        const sectionTop = section.getBoundingClientRect().top;
+
+        if (sectionTop < (browserScreenHeight / 2)){
+            current = sectionID;
+        }
+    })
+
+    navLinks.forEach(link => {
+        link.classList.remove('navigator__item--active');
+        
+        if (link.classList.contains(current)){
+            link.classList.add('navigator__item--active')
+        } 
+    })
 }
 
 
