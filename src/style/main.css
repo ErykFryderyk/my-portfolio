@@ -1009,20 +1009,22 @@ img {
 
 /* Mobile Navigation Menu */
 .mobile-nav-menu {
-  width: 260px;
-  background-color: rgba(46, 8, 8, 0.678);
+  width: 100%;
+  background-color: rgba(46, 8, 8, 0.808);
   transform: translateX(100%);
   position: fixed;
   top: 0;
   right: 0;
   bottom: 0;
   z-index: 999;
-  margin-top: 50px;
   transition: transform 0.3s ease-in-out; }
+  @media only screen and (min-width: 768px) {
+    .mobile-nav-menu {
+      width: 270px; } }
   .mobile-nav-menu--active {
     transform: translateX(0); }
   .mobile-nav-menu__list {
-    margin-top: 50px; }
+    margin-top: 80px; }
   .mobile-nav-menu__item {
     height: 50px;
     text-align: center; }
