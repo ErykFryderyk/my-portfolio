@@ -961,23 +961,26 @@
 //-----------------------
 
 .mobile-nav-menu{
-    width: 260px;
-    background-color: rgba(46, 8, 8, 0.678);
+    width: 100%;
+    background-color: rgba(46, 8, 8, 0.808);
     transform: translateX(100%);
     position: fixed;
     top: 0;
     right: 0;
     bottom: 0;
     z-index: 999;
-    margin-top: 50px;
     transition: transform 0.3s ease-in-out;
+
+    @include breakpoint(tab){
+        width: 270px;
+    }
     
     &--active{
         transform: translateX(0);
     }
 
     &__list{
-        margin-top: 50px;
+        margin-top: 80px;
     }
     &__item{
         height: 50px;
